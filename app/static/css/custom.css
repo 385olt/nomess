@@ -1,0 +1,108 @@
+html {
+    height:100%;
+}
+
+body {
+	background-color: #f0f2f5;
+	background-image: url(../images/background.png);	
+	height:100%;
+}
+
+table td {
+	vertical-align: top;
+}
+
+.copyright {
+	margin: 50px 0 20px 0;
+	padding:0 20px 0 20px;
+	color: #666;
+}
+
+.header-row {
+	margin-top: 50px;
+	margin-bottom: 0;
+}
+
+.header-row .col {
+	position: relative;
+}
+
+.header-row .version {
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	color: #aaa;
+}
+
+.header-row h3 {
+	color: #597da3;
+}
+
+.header-zero {
+	background-color: #dae1e8;
+	background-image: url(../images/0-background.png);
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+}
+
+.main-panel {
+	border:1px solid #eaecf0;
+}
+
+.find-panel {
+	background-color: #f0f2f5;
+	margin: 50px 0 30px 0;
+	padding-right: 10px;
+}
+
+.find-panel img {
+	vertical-align: bottom;
+}
+
+.find-panel td {
+	padding: 0;
+}
+
+.panel-table {
+	border: 1px dashed #dae1e8;
+}
+
+.find-text-td {
+	width: 100%;
+}
+
+.find-text {
+	font-size: 25px;
+	width: 100%;
+	text-align: center;
+	padding-top: 80px;
+	height: 200px;
+}
+
+.find-link {
+	color: #597da3;
+	cursor: pointer;
+}
+
+.find-wait {
+	color: #999999;
+}
+
+.found-text {
+	padding: 10px;
+}
+
+.found-names a {
+	font-size: 25px;
+	color: #597da3;
+	text-decoration: underline;
+}
+
+.found_write {
+	font-size: 20px;
+	color: #597da3;
+}
+
+.found_action {
+	vertical-align: bottom;
+}

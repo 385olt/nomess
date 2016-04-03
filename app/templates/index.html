@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+
+      <div class="container">
+        <div class="row header-row">
+          <div class="col s10 offset-s1">
+            <h3>Сообщений <span class="header-zero">+0</span></h3>
+            <div class="version">0.0.1 &alpha;</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card-panel z-depth-0 main-panel">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et eros in mi semper congue. Donec lorem purus, mattis at fringilla vitae, blandit et  justo. Nam at mi volutpat, mattis augue nec, laoreet erat. Vestibulum posuere est enim, id rhoncus lorem interdum non. Nulla porttitor porta pretium.  Cras scelerisque vel neque placerat semper. Proin magna est, cursus eu blandit et, ultrices et nisl.
+
+              <div class="row">
+                <div class="col s8 offset-s2">
+                  <div class="card-panel z-depth-0 find-panel">
+                    <table class="panel-table">
+                      <tr>
+                        <td><img  src="{{ url_for('static', filename='images/camera_200.png') }}" id="find_image"></td>
+                        <td class="find-text-td"><div class="find-text" id="find_text"><a class="find-link" id="find_link">Выбрать собеседника</a></div></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+    
+              Etiam nisl quam, porttitor non feugiat vitae, accumsan quis felis. Integer sollicitudin ut enim at suscipit. Suspendisse luctus lectus vitae nunc   tristique, ac           mollis nisl eleifend. Duis elit ante, viverra pharetra justo vel, pulvinar vulputate sapien. Quisque vitae ornare mi, at interdum   neque. Class aptent taciti          sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc arcu nisi, varius eget tellus eu, varius   elementum erat. In ligula orci, cursus vel          convallis nec, sodales ut libero. Suspendisse imperdiet id nulla id rhoncus. Cum sociis natoque   penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </div>
+          </div>
+        </div>
+        <h6 class="center-align copyright">385 &copy; 2016</h6>
+      </div>
+
+      <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    </body>
+  </html>
