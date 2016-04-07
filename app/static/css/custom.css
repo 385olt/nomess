@@ -69,19 +69,26 @@ table td {
 }
 
 .find-image {
-	width:400px;
-	height:400px;
+	min-width: 100px;
+	min-height: 100px;
+	width: 50vw;
+    height: 50vw;
+	max-width:400px;
+	max-height:400px;
 	overflow:hidden; 
 	margin: 0 auto;
 	position: relative;
 }
 
 .find-image img {
+	max-width: 100%;
+	max-height: auto;
 	margin: 0 auto; 
 	display: block; 
 	position: absolute; 
 	top: 50%; 
-	transform: translate(0, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .found-text {
