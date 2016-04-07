@@ -34,12 +34,9 @@
               <div class="row">
                 <div class="col s8 offset-s2">
                   <div class="card-panel z-depth-0 find-panel">
-                    <table class="panel-table">
-                      <tr>
-                        <td><img  src="{{ url_for('static', filename='images/camera_200.png') }}" id="find_image"></td>
-                        <td class="find-text-td"><div class="find-text" id="find_text"><a class="find-link" id="find_link">Выбрать собеседника</a></div></td>
-                      </tr>
-                    </table>
+                  	<div class="found-name" id="found_name"><a class="find-link" id="find_link">Выбрать собеседника</a></div>
+                  	<div class="responsive-img circle find-image"><img src="{{ url_for('static', filename='images/camera.png') }}" width="400" id="find_image"></div>
+                    <div class="found-text" id="found_text"></div>
                   </div>
                 </div>
               </div>

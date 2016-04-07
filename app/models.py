@@ -24,9 +24,9 @@ def chooseUser():
 			return last_seen and followers_count and user['can_write_private_message']
 	
 	
-	user = chooseUser(vk_api, 'last_seen, followers_count, can_write_private_message, photo_200')
+	user = chooseUser(vk_api, 'last_seen, followers_count, can_write_private_message, photo_max_orig')
 	
 	while not valid(user, current_time):
-		user = chooseUser(vk_api, 'last_seen, followers_count, can_write_private_message, photo_200')
+		user = chooseUser(vk_api, 'last_seen, followers_count, can_write_private_message, photo_max_orig')
 
 	return user

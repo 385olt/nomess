@@ -53,46 +53,48 @@ table td {
 	background-color: #f0f2f5;
 	margin: 50px 0 30px 0;
 	padding-right: 10px;
-}
-
-.find-panel img {
-	vertical-align: bottom;
-}
-
-.find-panel td {
-	padding: 0;
-}
-
-.panel-table {
-	border: 1px dashed #dae1e8;
-}
-
-.find-text-td {
-	width: 100%;
-}
-
-.find-text {
-	font-size: 25px;
-	width: 100%;
 	text-align: center;
-	padding-top: 80px;
-	height: 200px;
+	border: 1px dashed #dae1e8;
 }
 
 .find-link {
 	color: #597da3;
 	cursor: pointer;
+	text-decoration: none !important;
 }
 
 .find-wait {
-	color: #999999;
+	color: #999999 !important;
+	text-decoration: none !important;
+}
+
+.find-image {
+	width:400px;
+	height:400px;
+	overflow:hidden; 
+	margin: 0 auto;
+	position: relative;
+}
+
+.find-image img {
+	margin: 0 auto; 
+	display: block; 
+	position: absolute; 
+	top: 50%; 
+	transform: translate(0, -50%);
 }
 
 .found-text {
 	padding: 10px;
+	margin: 0 auto;
+	width: 400px;
 }
 
-.found-names a {
+.found-name {
+	margin-bottom: 10px;
+}
+
+.found-name a {
 	font-size: 25px;
 	color: #597da3;
 	text-decoration: underline;
@@ -101,8 +103,4 @@ table td {
 .found_write {
 	font-size: 20px;
 	color: #597da3;
-}
-
-.found_action {
-	vertical-align: bottom;
 }

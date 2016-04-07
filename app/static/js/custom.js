@@ -1,10 +1,10 @@
 document.onload = onload();
 
+var photo;
 function chooseUser() {
 
 	$("#find_link").attr("class", "find-wait");
 	$("#find_link").html("Подождите...");
-	$("#find_image").removeAttr("src");
 
 	$.get( "/choose", function( data ) {
 		data = data.split("'").join("\"");
@@ -12,12 +12,17 @@ function chooseUser() {
 		
 		console.log(data);
 
-		$("#find_text").attr("class", "found-text");
-		$("#find_text").html("<table height='180'><tr><td><div class='found-names'>" +
-			"<a href='http://vk.com/id" + data.uid + "' target='_blank'>" + data.last_name + " " + data.first_name + "</a></div>" +
-			"<small>uid: " + data.uid + "</small></td></tr>" +
-			"<tr><td class='found_action'><a class='found_write' target='_blank' href='http://vk.com/im?sel=" + data.uid + "'>Начать диалог</a></td></tr></table>");
-		$("#find_image").attr("src", data.photo_200 + "?timestamp=" + new Date().getTime());
+		$("#found_name").html("<a href='http://vk.com/id" + data.uid + "' target='_blank'>" + data.last_name + " " + data.first_name + "</a>")
+		$("#found_text").html("<a class='found_write' href='https://m.vk.com/mail?act=show&peer=" + data.uid + "'>Написать</a><br><small>uid: " + data.uid + "</small>");
+		
+		if (data.photo_max_orig  !== undefined) {
+			$("#find_image").attr("src", data.photo_max_orig + "?timestamp=" + new Date().getTime());
+		}
+
+		$('.found_write').click(function (event) {
+    		event.preventDefault();
+    		window.open($(this).attr("href"), "writeWindow", "width=600,height=600,scrollbars=yes");
+		});
 	});
 }
 
