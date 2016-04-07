@@ -117,6 +117,7 @@ table td {
 
 .try-again a {
 	color: #999999;
+	cursor: pointer;
 }
 
 .found-name {

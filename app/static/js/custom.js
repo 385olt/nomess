@@ -14,7 +14,7 @@ function chooseUser() {
 
 		$("#found_name").html("<a href='http://vk.com/id" + data.uid + "' target='_blank'>" + data.last_name + " " + data.first_name + "</a>")
 		$("#found_text").html("<a class='found_write' href='https://m.vk.com/mail?act=show&peer=" + data.uid + "'>Написать</a><br><small>uid: " + data.uid + "</small>");
-		$("#try_again").html("<a onclick='chooseUser()'>Попробовать еще раз</a>");
+		$("#try_again").html("<a onclick='tryAgain()'>Попробовать еще раз</a>");
 		if (data.photo_max_orig  !== undefined) {
 			$("#find_image").attr("src", data.photo_max_orig + "?timestamp=" + new Date().getTime());
 		}
@@ -24,6 +24,11 @@ function chooseUser() {
     		window.open($(this).attr("href"), "writeWindow", "width=600,height=600,scrollbars=yes");
 		});
 	});
+}
+
+function tryAgain() {
+	$("#try_again").html("");
+	chooseUser();
 }
 
 function onload() {
