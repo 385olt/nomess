@@ -11,7 +11,7 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      <title>Сообщений</title>
+      <title>Ноль Сообщений</title>
     </head>
 
     <body>
@@ -45,6 +45,17 @@
               Etiam nisl quam, porttitor non feugiat vitae, accumsan quis felis. Integer sollicitudin ut enim at suscipit. Suspendisse luctus lectus vitae nunc   tristique, ac           mollis nisl eleifend. Duis elit ante, viverra pharetra justo vel, pulvinar vulputate sapien. Quisque vitae ornare mi, at interdum   neque. Class aptent taciti          sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc arcu nisi, varius eget tellus eu, varius   elementum erat. In ligula orci, cursus vel          convallis nec, sodales ut libero. Suspendisse imperdiet id nulla id rhoncus. Cum sociis natoque   penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             </div>
           </div>
+        </div>
+        <div class="row">
+          {% for stat in statistics %}
+            <div class="col s12 m6">
+              <div class="card-panel z-depth-0 stats">
+                <img src="{{ stat['data']['photo_50'] }}" class="circle" align="middle">
+                <a href="http://vk.com/id{{ stat['uid'] }}" target="_blank">{{ stat['data']['last_name'] }} {{ stat["data"]["last_name"] }}</a> 
+                <div class="right count">+{{ stat["data"]["count"] }}</div>
+              </div>
+            </div>
+          {% endfor %}
         </div>
         <h6 class="center-align copyright">385 &copy; 2016</h6>
       </div>

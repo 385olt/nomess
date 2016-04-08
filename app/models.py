@@ -1,15 +1,10 @@
 # coding=utf-8
 
-import vk
 import random
-import time
+from app import current_time, vk_api
 
-def chooseUser():
-	current_time = int(time.time())
+def chooseUser():	
 
-	vk_session = vk.Session()
-	vk_api = vk.API(vk_session, lang='ru', timeout=10)
-	
 	def chooseUser(vk_api, fields):
 		result = vk_api.users.get(user_ids=random.randint(1, 350000000), fields=fields)
 		return result[0]

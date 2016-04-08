@@ -56,6 +56,10 @@ table td {
 	margin-top: 20px;
 }
 
+.card-panel {
+	border:1px solid #eaecf0;
+}
+
 .main-panel .content {
 	padding: 20px 10px 20px 10px; 
 }
@@ -127,10 +131,24 @@ table td {
 .found-name a {
 	font-size: 25px;
 	color: #597da3;
-	text-decoration: underline;
 }
 
 .found_write {
 	font-size: 20px;
 	color: #597da3;
+}
+
+.stats img {
+	margin-right: 10px;
+}
+
+.stats a {
+	color: #597da3;
+}
+
+.stats .count {
+	font-size: 30px;
+	padding-top: 2px;
+	color: #999;
+	font-weight: 700;
 }
