@@ -51,8 +51,8 @@
             <div class="col s12 m6">
               <div class="card-panel z-depth-0 stats">
                 <img src="{{ stat['data']['photo_50'] }}" class="circle" align="middle">
-                <a href="http://vk.com/id{{ stat['uid'] }}" target="_blank">{{ stat['data']['last_name'] }} {{ stat["data"]["last_name"] }}</a> 
-                <div class="right count">+{{ stat["data"]["count"] }}</div>
+                <a href="http://vk.com/id{{ stat['uid'] }}" target="_blank">{{ stat['data']['first_name'] }} {{ stat["data"]["last_name"] }}</a> 
+                <div class="right count">+{{ stat["data"]["points"] }}</div>
               </div>
             </div>
           {% endfor %}
