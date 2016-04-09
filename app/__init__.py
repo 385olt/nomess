@@ -9,7 +9,6 @@ import pickle
 import vk
 
 current_time = int(time.time())
-path = ''
 
 vk_session = vk.Session()
 vk_api = vk.API(vk_session, lang='ru', timeout=10)
@@ -20,7 +19,7 @@ def loadStatistics():
 	global statistics
 	global last_post_id
 
-	statistics = pickle.load(open(path + 'data.dat', 'rb'))
+	statistics = pickle.load(open(os.path.join(basedir, 'data.dat'), 'rb'))
 	last_post_id = statistics[0]
 	
 	statistics = statistics[1:]

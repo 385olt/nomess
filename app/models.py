@@ -1,8 +1,9 @@
 # coding=utf-8
 
+import os
 import random
 import pickle
-from app import current_time, vk_api, loadStatistics, statistics, last_post_id, path
+from app import current_time, vk_api, loadStatistics, statistics, last_post_id, basedir
 
 def chooseUser():	
 
@@ -64,7 +65,7 @@ def updateStatistics():
 		statistics_list.append({'uid': uid, 'data': statistics_dict[uid]})
 	
 	# Write to the file
-	file = open(path + 'data.dat', 'wb')
+	file = open(os.path.join(basedir, 'data.dat'), 'wb')
 	pickle.dump(statistics_list, file)
 
 	loadStatistics()
