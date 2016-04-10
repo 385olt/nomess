@@ -152,3 +152,9 @@ table td {
 	color: #999;
 	font-weight: 700;
 }
+
+.instructions {
+	font-size: 18px;
+	color: #555;
+	display: none;
+}
